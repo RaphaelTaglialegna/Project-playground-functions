@@ -24,10 +24,11 @@ function concatName(arrayValue) {
   let stringValue = `${arrayValue[x]}, ${arrayValue[0]}`;
   return stringValue;
 }
-console.log(concatName(['Fire', 'Air', 'Water']));
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsSun = wins * 3;
+  let points = winsSun + ties;
+  return points;
 }
 
 // Desafio 6
