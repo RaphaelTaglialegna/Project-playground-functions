@@ -1,8 +1,9 @@
+/* eslint-disable sonarjs/no-one-iteration-loop */
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } 
+  }
   return false;
 }
 
@@ -12,8 +13,9 @@ function calcArea(b, h) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let arrayPhrase = phrase.split(' ');
+  return arrayPhrase;
 }
 
 // Desafio 4
