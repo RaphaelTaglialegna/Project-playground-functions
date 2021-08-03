@@ -32,9 +32,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbRep) {
+  let repetNumber = 0;
+  const max = Math.max.apply(null, numbRep);
+  for (let index = 0; index < numbRep.length; index += 1) {
+    if (max === numbRep[index]) {
+      repetNumber += 1;
+    }
+  }
+  return repetNumber;
 }
+
+let test = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(test));
 
 // Desafio 7
 function catAndMouse() {
