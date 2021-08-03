@@ -19,10 +19,12 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayValue) {
+  let x = arrayValue.length - 1;
+  let stringValue = `${arrayValue[x]}, ${arrayValue[0]}`;
+  return stringValue;
 }
-
+console.log(concatName(['Fire', 'Air', 'Water']));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
