@@ -50,16 +50,29 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distenceCat1 === distenceCat2) {
     return 'os gatos trombam e o rato foge';
   } if (distenceCat1 < distenceCat2) {
-    return "cat1";
-  } else {
-      return "cat2";
-  }  
+    return 'cat1';
+  }
+  return 'cat2';
 }
-console.log (catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function fizzBuzz(arrayNumbers) {
+  let arrayFizzBuzz = [];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    let fizz = arrayNumbers[index] % 3;
+    let buzz = arrayNumbers[index] % 5;
+    if (fizz === 0 && buzz === 0) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (fizz === 0 && buzz !== 0) {
+      arrayFizzBuzz.push('fizz');
+    } else if (buzz === 0 && fizz !== 0) {
+      arrayFizzBuzz.push('buzz');
+    } else {
+      arrayFizzBuzz.push('bug!');
+    }
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
