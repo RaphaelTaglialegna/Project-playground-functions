@@ -124,3 +124,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
