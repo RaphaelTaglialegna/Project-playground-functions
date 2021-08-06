@@ -70,14 +70,22 @@ function triangleCheck(lineA, lineB, lineC) {
   } if (lineB > xx || lineB < yy) {
     return false;
   } if (lineC > xxx || lineA < yyy) {
-     return false;
+    return false;
   }
   return true;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringDrinks) {
+  let numbers = stringDrinks.match(/\d+/g).map(Number);
+  let sum = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    sum += numbers[index];
+  }
+  if (sum === 1) {
+    return '1 copo de água';
+  }
+  return `${sum} copos de água`;
 }
 
 module.exports = {
