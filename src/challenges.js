@@ -56,20 +56,34 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzBuzzIndex(index) {
+  if (index % 3 === 0 && index % 5 === 0) {
+    return 'fizzBuzz';
+  } if (index % 3 === 0) {
+    return 'fizz';
+  } if (index % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 
 function fizzBuzz(arrayNumbers) {
   let arrayFizzBuzz = [];
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (arrayNumbers[index] % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
-    } else if (arrayNumbers[index] % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
-    } else {
-      arrayFizzBuzz.push('bug!');
-    }
-  }
+  arrayNumbers.forEach(function (index) {
+    arrayFizzBuzz.push(fizzBuzzIndex(index));
+  });
+  // my old solution;
+  // for (let index = 0; index < arrayNumbers.length; index += 1) {
+  //   if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+  //     arrayFizzBuzz.push('fizzBuzz');
+  //   } else if (arrayNumbers[index] % 3 === 0) {
+  //     arrayFizzBuzz.push('fizz');
+  //   } else if (arrayNumbers[index] % 5 === 0) {
+  //     arrayFizzBuzz.push('buzz');
+  //   } else {
+  //     arrayFizzBuzz.push('bug!');
+  //   }
+  // }
   return arrayFizzBuzz;
 }
 
