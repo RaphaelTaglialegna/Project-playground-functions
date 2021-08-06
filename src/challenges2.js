@@ -18,6 +18,22 @@ function techList(techProp, name) {
 }
 
 // Desafio 11
+function repeatNumber(arrayNumbers) {
+  let countRepeat = {};
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (countRepeat[arrayNumbers[index]]) {
+      countRepeat[arrayNumbers[index]] += 1;
+    } else {
+      countRepeat[arrayNumbers[index]] = 1;
+    }
+  }
+  for (let indexCount in countRepeat) {
+    if (countRepeat[indexCount] >= 3) {
+      return true;
+    }
+  }
+  return false;
+}
 
 function generatePhoneNumber(arrayNumbers) {
   let phoneNumber = '';
@@ -36,31 +52,27 @@ function generatePhoneNumber(arrayNumbers) {
       phoneNumber += `-${arrayNumbers[index]}`;
     } if (index >= 8) {
       phoneNumber += arrayNumbers[index];
-    }    
+    }
   }
   return phoneNumber;
 }
 
-function repeatNumber(arrayNumbers) {
-  let countRepeat = {};
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (countRepeat[arrayNumbers[index]]) {
-      countRepeat[arrayNumbers[index]] += 1;
-    } else {
-      countRepeat[arrayNumbers[index]] = 1;
-    }
-  }
-  for (let indexCount in countRepeat) {
-    if (countRepeat[indexCount] >= 3) {
-      return true;
-    }
-  }
-  return false;
-}
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let x = lineB + lineC;
+  let y = Math.abs(lineB - lineC);
+  let xx = lineA + lineC;
+  let yy = Math.abs(lineA - lineC);
+  let xxx = lineB + lineA;
+  let yyy = Math.abs(lineB - lineA);
+  if (lineA > x || lineA < y) {
+    return false;
+  } if (lineB > xx || lineB < yy) {
+    return false;
+  } if (lineC > xxx || lineA < yyy) {
+     return false;
+  }
+  return true;
 }
 
 // Desafio 13
