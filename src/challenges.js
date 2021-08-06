@@ -56,17 +56,15 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity
+
 function fizzBuzz(arrayNumbers) {
   let arrayFizzBuzz = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    let fizz = arrayNumbers[index] % 3;
-    let buzz = arrayNumbers[index] % 5;
-    if (fizz === 0 && buzz === 0) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       arrayFizzBuzz.push('fizzBuzz');
-    } else if (fizz === 0 && buzz !== 0) {
+    } else if (arrayNumbers[index] % 3 === 0) {
       arrayFizzBuzz.push('fizz');
-    } else if (buzz === 0 && fizz !== 0) {
+    } else if (arrayNumbers[index] % 5 === 0) {
       arrayFizzBuzz.push('buzz');
     } else {
       arrayFizzBuzz.push('bug!');
@@ -76,11 +74,28 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringphrase) {
+  // Here I declarete the variables which I will change in the string, I have to use /gi g = global i = ignore hight of letters.
+  let la = /a/gi;
+  let le = /e/gi;
+  let li = /i/gi;
+  let lo = /o/gi;
+  let lu = /u/gi;
+  // I used the function replace().
+  let newEncode = stringphrase.replace(la, '1').replace(le, '2').replace(li, '3').replace(lo, '4');
+  newEncode = newEncode.replace(lu, '5');
+  return newEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringdecode) {
+  let l1 = /1/gi;
+  let l2 = /2/gi;
+  let l3 = /3/gi;
+  let l4 = /4/gi;
+  let l5 = /5/gi;
+  let newDecode = stringdecode.replace(l1, 'a').replace(l2, 'e').replace(l3, 'i').replace(l4, 'o');
+  newDecode = newDecode.replace(l5, 'u');
+  return newDecode;
 }
 
 module.exports = {
